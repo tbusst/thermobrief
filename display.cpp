@@ -32,3 +32,13 @@ void initScreen() {
   u8g2Fonts.setFont(u8g2_font_5x8_mf);
   u8g2Fonts.setCursor(0, 10);
 }
+
+void displayWiFi(String ip, String SSID) {
+  u8g2Fonts.setFont(u8g2_font_6x10_mf);
+  u8g2Fonts.setCursor(0, 0);
+  u8g2Fonts.println("Connected to");
+  u8g2Fonts.println(SSID);
+  u8g2Fonts.println("Local ESP32 IP: ");
+  u8g2Fonts.println(ip);
+  display.display();
+}

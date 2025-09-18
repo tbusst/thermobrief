@@ -12,5 +12,6 @@
 #define MAX_TITLE_LENGTH 10
 
 void initScreen();
+void displayWiFi(String ip, String ssid);
 
 #endif
