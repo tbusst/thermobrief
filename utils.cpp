@@ -1,7 +1,7 @@
 #include "utils.h"
 
 String connectToWifi() {
-  WiFi.mode(WIFI_STA); // Optional
+  WiFi.mode(WIFI_STA);
   WiFi.begin(SSID, PASSWORD);
   Serial.println("\nConnecting");
 
