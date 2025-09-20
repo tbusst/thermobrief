@@ -7,6 +7,6 @@
 #include <WiFi.h>
 #include "secrets.h"
 
-String contactApi(String prompt);
+String contactApi(const char* requestBody);
 
 #endif

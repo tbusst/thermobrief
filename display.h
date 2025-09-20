@@ -13,5 +13,6 @@
 
 void initScreen();
 void displayWiFi(String ip, String ssid);
+void displayString(String string);
 
 #endif

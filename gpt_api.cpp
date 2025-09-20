@@ -1,16 +1,14 @@
 #include "gpt_api.h"
 
-String contactApi(String prompt) {
+String contactApi(const char* requestBody) {
   HTTPClient http;
   http.begin("https://api.openai.com/v1/chat/completions");
   http.addHeader("Content-Type", "application/json");
   http.addHeader("Authorization", "Bearer " + String(API_KEY));
 
-  // Request
-  String requestBody = String("{\"model\": \"gpt-4o-mini\", \"messages\": [{\"role\": \"user\", \"content\": \"") + prompt + "\"}]}";
+  int httpResponseCode = http.POST((uint8_t*)requestBody, strlen(requestBody));
  
   // Response
-  int httpResponseCode = http.POST(requestBody);
   String payload = "{}";
 
   // Checks if response is valid
